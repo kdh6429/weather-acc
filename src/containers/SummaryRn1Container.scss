@@ -1,0 +1,23 @@
+.stmp-container {
+    .chart-component-wrap {
+        width : 50%;
+        display : inline-block;
+    }
+    .table-component-wrap {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    @media screen and (max-width: 960px) {
+        .chart-component-wrap {
+            width : 80%;
+            margin: auto;
+            display: block;
+        }
+        .table-component-wrap {
+            width : 50%;
+            margin: auto;
+        }
+    }
+}

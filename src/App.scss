@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+  padding-top: 30px;
+
+  font-size: 15px;
+
+  position: relative;
+
+  
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .nav {
+    font-size: 1.1em;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    a, li {
+      list-style-type: none;
+      text-decoration: none;
+      color: #232323;
+      
+      transition: color 0.3s ease;
+    }
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .menu-top {
+      width: 200px;
+      display: none;
+    }
+    .menu-side {
+      width: 250px;
+      display: block;
+    }  
+    li
+    {
+      padding: 10px 0;
+      font-size: 15px;
+    }
+    li a.is-active {
+      font-weight: bold;
+    }
+    .region-list {
+      padding-left: 15px;
+    }
+    #menuToggle
+    {
+      display: block;
+      position: relative;
+      // top: 50px;
+      // left: 50px;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    #menuToggle a:hover
+    {
+      color: tomato;
+    }
+    #menuToggle input
+    {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+    
+    #menuToggle span
+    {
+      display: block;
+      width: 33px;
+      height: 5px;
+      margin-bottom: 5px;
+      position: relative;
+      
+      background: #aba9a9;
+      border-radius: 3px;
+      
+      z-index: 1;
+      
+      transform-origin: 4px 0px;
+      
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+    
+    #menuToggle span:first-child
+    {
+      transform-origin: 0% 0%;
+    }
+    #menuToggle span:nth-last-child(3)
+    {
+      transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span
+    {
+      opacity: 1;
+      transform: rotate(45deg) translate(7px, -1px);
+      background: #232323;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(4)
+    {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+      transform: rotate(-45deg) translate(1px, 7px);
+    }
+    #menu
+    {
+      position: absolute;
+      width: 300px;
+      height: 100vh;
+      margin: -100px 0 0 -20px;
+      padding: 50px;
+      padding-top: 125px;
+      
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    #menuToggle input:checked ~ ul
+    {
+      transform: none;
+    }
+
+
+
+    @media screen and (max-width: 900px) {
+      .title {
+        display: inline-block;
+        position: absolute;
+        top: -5px;
+        left: 45px;
+        width: 300px;
+        font-size: 25px;
+      }
+      .menu-top {
+        display: inline-block;
+      }
+      .menu-side {
+        display: none;
+      }
+      .menu-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .nav {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .content {
+    display: inline-block;
+    width: calc(100% - 250px);
+  }
+  @media screen and (max-width: 900px) {
+    .content {
+      width: 100%;
+    }
+    .title {
+      display: none;
+    }
+  }
+  
+}

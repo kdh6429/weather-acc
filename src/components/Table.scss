@@ -1,0 +1,16 @@
+.table-component {
+    width: 100%;
+    text-align: center;
+
+    table {
+        width: 100%;
+        padding: 5%;
+
+        tr.hover {
+            background-color: aliceblue;
+        }
+        tr.pointer {
+            cursor: pointer;
+        }
+    }
+}

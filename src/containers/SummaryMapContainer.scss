@@ -1,0 +1,24 @@
+.map-container {
+    .map-component-wrap {
+        width : 50%;
+        display : inline-block;
+    }
+    .info-component-wrap {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 30px;
+    }
+
+    @media screen and (max-width: 960px) {
+        .map-component-wrap {
+            width : 60%;
+            margin: auto;
+            display: block;
+        }
+        .info-component-wrap {
+            width : 50%;
+            margin: auto;
+        }
+    }
+}

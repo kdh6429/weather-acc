@@ -1,0 +1,22 @@
+.main-wrapper {
+    width: 100%;
+    .ago {
+        text-align: right;
+        margin-bottom: 5px;
+    }
+    @media screen and (max-width: 1920px) {
+        .library-list .mp-continaer {width: calc(100% / 6 - (10px * 6))}
+    }
+    @media screen and (max-width: 1440px) {
+        .library-list .mp-continaer {width: calc(100% / 4 - (10px * 4))}
+    }
+    @media screen and (max-width: 1280px) {
+        .library-list .mp-continaer {width: calc(100% / 3 - (10px * 3))}
+    }
+    @media screen and (max-width: 960px) {
+        .library-list .mp-continaer {width: calc(100% / 2 - (10px * 2))}
+    }
+    @media screen and (max-width: 500px) {
+        .library-list .mp-continaer {width: calc(100% / 1 - (10px * 1))}
+    }
+}
